@@ -5,11 +5,11 @@ The official repository for optain experimental performance result on `distance 
 Distance loss function based on weighted mean square error. It can apply to monotonic classificaiton. There is a two types of Distance Loss, `Distance Mean Square`(DiMS), and `Absolute Distance Mean Square`(ADiMS). Below is a formula of DiMS.
 
 $$
-\mathscr{L}_{DiMS} = \frac{1}{nl}\sum\limits_{i=1}^{n} \sum\limits_{j=1}^{l} (\lvert A(T_{i}) - j \rvert + 1)^{2} (\hat{Y}_{ij} - Y_{ij})^{2}
+L_{DiMS} = \frac{1}{nl}\sum\limits_{i=1}^{n} \sum\limits_{j=1}^{l} (\lvert A(T_{i}) - j \rvert + 1)^{2} (T_{ij} - Y_{ij})^{2}
 $$
 
 $$
-\mathscr{L}_{ADiMS} = \frac{1}{nl}\sum\limits_{i=1}^{n} \sum\limits_{j=1}^{l} (\lvert A(T_{i}) - j \rvert + 1)(T_{ij} - Y_{ij})^{2}
+L_{ADiMS} = \frac{1}{nl}\sum\limits_{i=1}^{n} \sum\limits_{j=1}^{l} (\lvert A(T_{i}) - j \rvert + 1)(T_{ij} - Y_{ij})^{2}
 $$
 
 where
