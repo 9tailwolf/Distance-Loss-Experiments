@@ -80,4 +80,4 @@ You can fix seed by `seed` argument. If you set seed 0, then all progress includ
 
 ## Related Repository
 - [distnace_loss_torch](https://github.com/9tailwolf/distance_loss_torch) : The official repository for distance loss function package.
-- [Distance-Loss-Experiments_SST-5](https://github.com/9tailwolf/Distance-Loss-Experiment_SST-5) : The official repository for achieve score on SST-5 semantic analysis. 
+- [Distance-Loss-Experiments_SST-5](https://github.com/9tailwolf/Distance-Loss-Experiments_SST-5) : The official repository for achieve score on SST-5 semantic analysis. 
