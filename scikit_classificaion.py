@@ -1,11 +1,14 @@
 import argparse
 import torch
 import json
+
+
 from classes.Datasets import DatasetforVirtualData
 from classes.Dataloaders import DataLoader, data_spliter
 from classes.Models import NN
 from classes.Trainer import Trainer
 from classes.Utils import get_device, str2loss
+
 def get_argparse():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('--loss', default='dims', type=str2loss, help="Enter the loss functions : mse, ce, mae, dims, adims, dima, adima.")

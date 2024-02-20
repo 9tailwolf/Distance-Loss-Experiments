@@ -1,6 +1,3 @@
-'''
-Requirement Libraries
-'''
 import time
 import torch
 from tqdm import tqdm
@@ -12,9 +9,6 @@ from transformers import get_linear_schedule_with_warmup
 from torch.nn.utils import clip_grad_norm_
 from loguru import logger
 
-'''
-Local Classes
-'''
 from classes.Utils import get_device
 from classes.Loss import MSELoss, CrossEntropyLoss, L1Loss, DiMSLoss, DiMALoss, ADiMSLoss, ADiMALoss
 
@@ -44,12 +38,8 @@ class Trainer:
             self.loss_fn = ADiMALoss()
     
         self.optimizer = AdamW([{'params': self.model.parameters()}, {'params': self.loss_fn.parameters(), 'lr': lr}], lr=lr)
-        if False:
-            self.scheduler = get_linear_schedule_with_warmup(self.optimizer, num_warmup_steps = 0, num_training_steps = epochs * len(self.dataloader_train))
-        else:
-            self.scheduler = StepLR(self.optimizer, step_size=10, gamma=0.5)
+        self.scheduler = StepLR(self.optimizer, step_size=10, gamma=0.5)
 
-        
     def train(self):
         self.model.zero_grad()
         self.model.train()
@@ -72,7 +62,6 @@ class Trainer:
             self.scheduler.step()
             self.eval(epoch, total_loss)
             
-
     def eval(self,e,l):
         correct = 0
         count = 0

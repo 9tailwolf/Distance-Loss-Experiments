@@ -1,8 +1,9 @@
-from classes.Utils import get_device
 import torch
 import torch.nn as nn
 from torch.nn import MSELoss, CrossEntropyLoss, L1Loss
 from distanceloss import DiMSLoss, ADiMSLoss
+
+from classes.Utils import get_device
     
 class DiMALoss(nn.Module):
     def __init__(self):

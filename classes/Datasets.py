@@ -1,12 +1,9 @@
-'''
-Requirement Libraries
-'''
 import pandas as pd
 import torch
-import re
 from transformers import AutoTokenizer
 from sklearn.datasets import make_regression
 from torch.utils.data import Dataset
+
 from classes.Utils import get_data_info
 
 class DatasetforVirtualData(Dataset):
