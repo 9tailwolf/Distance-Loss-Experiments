@@ -2,7 +2,7 @@
 The official repository for optain experimental performance result on `distance loss functions`.
 
 ## Distance Loss Function
-Distance loss function based on weighted mean square error. It can apply to monotonic classificaiton. There is a two types of Distance Loss, `Distance Mean Square`(DiMS), and `Absolute Distance Mean Square`(ADiMS). Below is a formula of DiMS.
+Distance loss functions are kinds of weighted mean square error, whose weights are the distance between the predicted label and the targe. It can apply to monotonic classificaiton. There is a two types of Distance Loss, `Distance Mean Square`(DiMS), and `Absolute Distance Mean Square`(ADiMS). Below is a formula of DiMS.
 
 
 
